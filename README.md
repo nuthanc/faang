@@ -1,7 +1,9 @@
 # Interview Preparation for FAANG(Facebook, Apple, Amazon, Netflix and Google)
 
+* Software first tech company
 * First Gut check Interview(15-30 minutes) 
   * Work history
+  * Why do u want in this company?
   * How long do u code? Ans: As long as I can
   * Deep passion 
 * Second is Technical Phone Screen Interview for a technical problem(1 hour)
