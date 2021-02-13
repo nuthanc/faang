@@ -1,8 +1,8 @@
-/* Best Case
+/* 
 Array: [1, 3, 7, 9, 2], target = 11
 */
 
-const bestCase = (arr, target) => {
+const findTwoSum = (arr, target) => {
   for (let p1=0; p1<arr.length-1; p1++) {
     const des = target - arr[p1]
     for (let p2=p1+1; p2<arr.length; p2++) {
@@ -11,6 +11,7 @@ const bestCase = (arr, target) => {
       }
     }
   }
+  return null; 
 }
 
-console.log(bestCase(arr=[1,3,7,9,2], target=11))
+console.log(findTwoSum(arr=[1,3,7,9,2], target=11))
