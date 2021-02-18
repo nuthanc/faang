@@ -11,7 +11,7 @@ const findTwoSum = (arr, target) => {
       }
     }
   }
-  return null; 
+  return None
 }
 
 console.log(findTwoSum(arr=[1,3,7,9,2], target=11))
