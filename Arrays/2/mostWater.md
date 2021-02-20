@@ -26,4 +26,13 @@
   * [6, 9, 3, 4, 5, 8]
     * 6 and 8 or 9 and 8
     * 6 * 5 = 30, 8 * 4 = 32
-    
+
+### Step 3: Figure out a solution without code
+
+* Here in this question the **Greates** instead of just giving the indices as soon as we found it in the previous question
+* Let's take our 1st test case: [7, 1, 2, 3, 9]
+* Area = l * w, where l = min(a,b) and w = (bi-ai)
+* maxArea = 0
+* 2 pointers, 1 at 7, and the other from 1 to 9 
+* Next at 1, then from 2 to 9
+* Similarly till 3
