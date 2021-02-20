@@ -12,3 +12,18 @@
 * Does a higher line inside our container affect our area?
   * No, lines inside a container don't affect the area
 ![img](../../img/middle.png)
+
+### Step 2: Write out some test cases
+
+* What is the best test case
+  * [7, 1, 2, 3, 9] = 28
+    * We know for certain 7 and 9
+    * Greatest and farthest apart
+* Empty array and 1 Array
+  * [] = 0
+  * [7] = 0
+* Not obvious what the correct answer is
+  * [6, 9, 3, 4, 5, 8]
+    * 6 and 8 or 9 and 8
+    * 6 * 5 = 30, 8 * 4 = 32
+    
