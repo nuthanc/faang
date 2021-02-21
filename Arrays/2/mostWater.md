@@ -36,3 +36,37 @@
 * 2 pointers, 1 at 7, and the other from 1 to 9 
 * Next at 1, then from 2 to 9
 * Similarly till 3
+
+### Step 4: Code the solution
+
+### Step 5: Double Check for Errors
+
+### Step 6: Test our code with our test cases
+
+### Step 7: Time and Space Complexity
+
+* Time Complexity: O(n^2)
+* Space Complexity: O(1)
+
+### Step 8: Can we optimize our solution?
+
+* Nothing can be done with Space Complexity in this question to decrease Time Complexity
+* New Technique: **Shifting pointers**
+* New ex: [4,8,1,2,3,9], a(1st pointer) at index 0 and b(2nd pointer) at index 5
+* Not the case when a and b are greater distance apart, our area goes up
+  * For 4 and 9, we have area of 20
+  * For 8 and 9, we have area of 32
+* **Technique**:
+  * How is area calculated: min(a,b) * (bi - ai)
+  * Width(bi-ai): Area impacted
+    * How can width be maximum: when they are further apart
+  * min(a,b): Area impacted
+    * When smaller value becomes bigger, area increases
+    * When bigger values becomes even bigger, no impact on area
+    * When bigger value becomes smaller, area decreases
+    * So what to move, move the pointer whose value is smaller
+  * How to start:
+    * 2 pointers, 1 at the beginning and the other at the end
+    * This ensures we get the maximum width and there is no way Outskirts get more value since we are starting from the ends
+    * Calculate area and replace maxArea
+    * Move the pointer whose value is smaller
