@@ -1,6 +1,5 @@
 def mostWater(heights):
-    p1 = 0
-    p2 = len(heights) - 1
+    p1, p2 = 0, len(heights) - 1
     maxArea = 0
     while(p1 != p2):
         width = p2 - p1
