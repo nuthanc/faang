@@ -2,9 +2,7 @@ var trap = function (height) {
   let l= (height.length !== 0)? height[0] : 0;
   let r = 0, rp = 0, val = 0;
   for (let p=1; p < height.length-1; p++) {
-    if (height[p-1] > l){
-      l = height[p-1]
-    }
+    l = Math.max(height[p - 1], l);
     if (l > height[p]){
       if (rp <= p){
           r = 0

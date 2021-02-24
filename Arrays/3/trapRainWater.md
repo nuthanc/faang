@@ -15,3 +15,40 @@
 * height = [0,1,0,2,1,0,1,3,2,1,2,1], sol = 6
 * [], sol = 0
 * [3, 4, 3], sol = 0
+
+### Step 3: Solution without code
+
+* This question requires to uitilize the entire array to generate a solution unlike the previous question
+* Smaller height out of the 2(Similar to previous question)
+* Formula: currentWater = min(maxLeft, maxRight) - currentHeight
+
+### Step 4: Solution with code
+
+* Add author's brute force solution
+
+### Step 5: Double check for errors
+
+* Ensure everything is correct
+
+### Step 6: Test our code with our test cases
+
+* Test for the test cases in Step 2
+
+### Step 7: Space and Time Complexity
+
+* Time Complexity is O(n^2)
+  * 1st for loop across the entire array
+  * The 2 while loops across the entire arry
+* Space Complexity is O(1)
+  * Even though we have multiple variables, they don't grow with the input
+  * They store only 1 value that change
+* Let's think of increasing Space complexity to decrease Time Complexity
+  * Nothing Cause that's the only logic we can thing about
+* Next is 2 Shifting Pointers at the ends
+  * Think of pointers moving inwards instead of outwards
+  * We can use this solution with modifications
+* In brute force, we were working with one pointer, the other 2 were derived from it
+* To use 2 Shifting Pointers technique,
+  * We need to make one of the 2 pointers as currentPointer as well as moving pointer
+  * The container will be maxLeft, p1 and p2 when p1 <= p2 (This ensures left boundary is smaller than right boundary and value can be calculated with leftBoundary and currentHeight alone)
+  * Else it will be p1, p2 and maxRight when p1 > p2
