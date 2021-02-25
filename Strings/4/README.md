@@ -22,3 +22,15 @@
 * "", "#": True
 * "", "": True
 * "a#b#c#", "": True
+
+#### Author's test cases
+
+* "ab#z", "az#z": True
+* "abc#d", "acc#c": False
+* "x#y#z#", "a#": True
+* "a###b", "b": True
+* "Ab#z", "ab#z": False
+
+### Step 3: Solution without code
+
+* Convert each of the strings to final form and compare them

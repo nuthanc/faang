@@ -16,12 +16,7 @@ var backspaceCompare = function (S, T) {
       secondString += T[i];
     }
   }
-  if (firstString === secondString) {
-    return true
-  }
-  else {
-    return false
-  }
+  return firstString === secondString;
 };
 
-console.log(backspaceCompare(S="ab##", T=""))
+console.log(backspaceCompare(S="ab##", T="ab"))

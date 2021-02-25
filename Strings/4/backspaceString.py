@@ -10,9 +10,6 @@ def backspaceCompare(S,T):
             secondString = secondString[:len(secondString)-1]
         else:
             secondString += ele
-    if firstString == secondString:
-        return True
-    else:
-        return False
+    return firstString == secondString
 
-print(backspaceCompare(S="ab##", T="ab"))
+print(backspaceCompare(S="ab##", T=""))
