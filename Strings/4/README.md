@@ -34,3 +34,24 @@
 ### Step 3: Solution without code
 
 * Convert each of the strings to final form and compare them
+
+### Step 4: Solution with code
+
+### Step 5: Double check for errors
+
+### Step 6: Test our code with our test case
+
+### Step 7: Space and Time Complexity
+
+* Considering solArray.js
+* Let's assume S's input size is 'a' and T's 'b'
+* Time Complexity will O(2a + b) or O(a +2b) which upon removing constant is O(a + b)
+  * buildString is O(a) for S and O(b) for T
+  * Next for loop is either O(a) or O(b) whichever is larger
+* Space complexity is also O(a + b)
+  * This is for building strings S and T, additional memory(array) is required and it scales with S and T
+
+### Step 8: Can we optimize our solution?
+
+* See if we can bring down the Space Complexity O(a + b)
+* 

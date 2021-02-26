@@ -1,4 +1,4 @@
-const string1 = 'ab#z';
+const string1 = '#';
 const string2 = 'az#z';
 
 const buildString = function (string) {
