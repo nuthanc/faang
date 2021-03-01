@@ -53,5 +53,26 @@
 
 ### Step 8: Can we optimize our solution?
 
-* See if we can bring down the Space Complexity O(a + b)
-* 
+* See if we can bring down the Space Complexity O(a + b), Time complexity is good enough
+* 3 Hints
+  * Utilize the original strings
+  * Use the 2 pointer technique
+  * Start from the end of the strings
+* Question itself doesn't require us to create finalS and finalT(refer Instructor's solution), but only True or False
+* So, to bring down the Space complexity, figure other way to find the solution without using extra memory
+* Now think of 2 Pointer solution, 1 in first string and the other in the second string
+* If we go from left to right, it will be problematic
+  * Because backspace delete backwards, so the compared characters will be useless
+* So, start from the right instead of the left
+* When we do this, there will be no characters right of the string since we are at the end of the string
+* If the character is not '#', it will end up in the final string
+* If the character is '#', then we need to keep count of the skip
+  * Note: We can't directly skip 2 characters because the previous character may be '#' and by skipping we are making a mistake
+* After you write the code, double check for mistakes
+  * In this case(Instructor's Optimal), since there are many if and else conditions, check for errors in braces, wrong placement of condition or statements etc
+* Calculate the Space and Time complexity for the Optimized code
+  * Time Complexity: O(a+b)
+    * Both the pointers move in every iteration of the while loop(either in # block or else block)
+    * We touch every single element
+  * Space Complexity: O(1)
+    * Not storing any scaling data structure
