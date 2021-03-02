@@ -17,3 +17,16 @@
 * Technical Knowledge
 * Critical and Abstract Problem Solving
 * Communication
+
+### Constraints in General
+
+* Will there always be a solution
+
+#### For Strings
+
+* Case sensitivity
+* Empty strings equal?
+
+#### For numbers
+
+* +ve and -ve
