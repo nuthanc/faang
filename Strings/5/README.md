@@ -23,6 +23,8 @@
 
 ### Step 3: Solution without code
 
+* First try Brute Force
+* For each i, check the maxlen without repeat
 ### Step 4: Solution with code
 
 ### Step 5: Double check for errors
