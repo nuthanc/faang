@@ -23,7 +23,7 @@
 * Trick is generating 2 strings when there is a conflict(one by removing left pointer and the other by removing the right pointer)
 * I used count of 0 and max of 2 to keep track of the two strings via the pointers
 * Author's approach
-```md
+```markdown
 * We can't directly use Palindrome techniques as Palindrome here is as a **subproblem**
 * Starting point: Since the string can be a palindrome, we can use one of the 3 techniques learnt
 * But which would be appropriate
