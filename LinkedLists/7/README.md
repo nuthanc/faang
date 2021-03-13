@@ -5,7 +5,21 @@
 
 ### Step 1: Verify the Constraints
 
+* Empty linked lists, what do we return
+* Will m and n always apply(i.e will m and n always be within the bounds of the linked list)
+  * Yes, assume 1 <= m <=n <= length of linked list
+* Positioning is 0 index or 1 index for m and n
+* Will there be cycle 
+* Are the values integers or characters
+* Can we receive m and n values for the whole linked list(I didn't think of this)
+  * Yes
+
 ### Step 2: Example Test Cases
+
+* 1,2,3,4,5 m=2, n=4
+  * 1,4,3,2,5
+* 1,2,3,4,5 m=1, n=5
+  * 5,4,3,2,1
 
 ### Step 3: Soln without code
 
