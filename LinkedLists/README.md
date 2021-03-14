@@ -28,7 +28,8 @@
 ### Step 7: Time and Space Complexity
 
 * Time Complexity: O(n)
-  * In while loop, we are iterating over all of the elements and the only thing that scales
+  * In while loop, we are iterating over all of the elements and is the only thing that scales
+  * Always advancing the current node
 * Space Complexity: O(1)
   * We are just assigning pointers to existing objects in memory and changing the value
   * We are not creating new objects
