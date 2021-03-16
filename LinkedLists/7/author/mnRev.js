@@ -49,3 +49,7 @@ var reverseBetween = function (head, m, n) {
     return newList;
   }
 };
+
+printList(linkedList);
+console.log('after reverse');
+printList(reverseBetween(linkedList, 2, 4));

@@ -51,6 +51,8 @@
 ### Step 4: Soln with code
 
 * Just like reversing the whole linked list, except here we are moving the elements from left to right(only the links)
+* **Author's implementation**
+* Involves 4 key elements: start(m-1), tail(m), n(head), n+1(tail link to this)
 
 
 ### Step 5: Double check for errors
