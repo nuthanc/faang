@@ -8,3 +8,7 @@
 * A linked list may not have a Tail always(E.g: Cycle in Linked List)
 * Return a Linked list, we are returning the **Head**
 
+### Doubly Linked List
+
+* Additional property of **prev**
+* Head's prev to null and Tail's next to null
