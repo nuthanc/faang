@@ -25,7 +25,19 @@
   * [1,3,2]
 * []
   * []
+* [3]
+  * [3]
+* while coming up with test case, we care about
+  * Order
+* What are the factors that might affect the order
+  * Multiple levels
+  * Children of different nodes that are in the same level(This might throw us off, so include this in the test case)
+
 
 ### Step 3: Solution without code
 
 * First, I need to parse the input or do I?
+* Key components
+  * Child
+  * Next
+  * Current
