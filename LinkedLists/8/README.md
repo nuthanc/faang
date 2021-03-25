@@ -41,7 +41,8 @@
   * Child
   * Next
   * Current
-* **Author's logic**
+* I took Bottom up approach
+* **Author's logic(Top Down)**
 * Subproblem: Merging of children to parent
 * Certain nodes are important
   * *Node with child* and *Next node*
@@ -49,3 +50,21 @@
 * Top down approach: If the node has child merge it
   * It doesn't matter if the child again has child nodes
   * We can traverse them later after making the links
+
+### Step 4: Solution with code
+
+* First, he thought of head being null 
+* Next is all turning the logic to code
+
+### Step 5: Double check for errors
+
+### Step 6: Run throught the test case
+
+### Step 7: Time and Space Complexity
+
+* Time Complexity: O(n)
+  * O(2n) dropping the constant
+  * Worst case each node is touched twice, once by tail and once by current node
+* Space Complexity: O(1)
+  * With recursive, space complexity will be O(n)
+  * The iterative is almost always better than recursive
