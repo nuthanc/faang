@@ -30,3 +30,8 @@
 #### For numbers
 
 * +ve and -ve
+
+#### General
+
+* Think of edge cases, when the variables become None
+* Don't try to change prominent variables value within another block(Use another variable)

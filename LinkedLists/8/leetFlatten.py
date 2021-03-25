@@ -25,7 +25,6 @@ class Solution:
                 child.prev = cur
                 cur.child = None
                 self.make_links(child, cnext)
-            print(f'Call -> next:{next}, pnext:{pnext}, cur: {cur.val}')
             self.make_links(next, pnext)
             if cur.next == None:
                 cur.next = pnext

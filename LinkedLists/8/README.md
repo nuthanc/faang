@@ -41,3 +41,11 @@
   * Child
   * Next
   * Current
+* **Author's logic**
+* Subproblem: Merging of children to parent
+* Certain nodes are important
+  * *Node with child* and *Next node*
+  * *Child's first* and *last node*
+* Top down approach: If the node has child merge it
+  * It doesn't matter if the child again has child nodes
+  * We can traverse them later after making the links
