@@ -8,6 +8,10 @@
 
 * Negative numbers?
 * Empty array? What to return?
+* Author's below
+* k larger than array length
+  * No
+
 
 ### Step 2: Test cases
 
@@ -27,7 +31,11 @@
 
 ### Step 7: Space and Time Complexity
 
-* Time Complexity: O(nlogn) 
-  * Python sort method's Time Complexity is O(nlogn)
-* Spacke Complexity: O(1)
-  * Sort in place
+* Time Complexity with Author's QuickSort implementation: O(nlogn)
+  * How long to find the Partition: O(n)
+    * scans across the whole array
+  * How many times are we doing the Partition call: O(logn)
+    * Splitting the array to 2
+
+* Space Complexity: O(logn)
+  * How many recursive calls we have(Height of the call stack): logn
