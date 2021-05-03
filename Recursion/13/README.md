@@ -39,3 +39,11 @@
 
 * Space Complexity: O(logn)
   * How many recursive calls we have(Height of the call stack): logn
+
+### Step 8: Optimize the solution
+
+* Using Hoarse's QuickSelect Algorithm
+* This algorithm is used to **find the kth smallest in an unordered list**
+* With 6 elements, the second largest is the fifth smallest
+* QuickSelect's logic of partitioning is still the same 
+* The only difference is checking the partitionIndex with indexToFind and based on that decision, we either find only left of partitionIndex or right of partitionIndex
