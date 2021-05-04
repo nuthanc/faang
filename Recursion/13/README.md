@@ -39,6 +39,9 @@
 
 * Space Complexity: O(logn)
   * How many recursive calls we have(Height of the call stack): logn
+  * 2 quickSort calls
+  * 2nd call of quickSort was waiting for 1st call of quickSort to finish
+  * Our function is still on the Call stack
 
 ### Step 8: Optimize the solution
 
@@ -47,3 +50,10 @@
 * With 6 elements, the second largest is the fifth smallest
 * QuickSelect's logic of partitioning is still the same 
 * The only difference is checking the partitionIndex with indexToFind and based on that decision, we either find only left of partitionIndex or right of partitionIndex
+* Time Complexity:
+  * Partition function's Time Complexity is O(n) since it scans through the entire array
+  * And based on the partition obtained, best case is O(n) and worst case is O(n^2)
+    * Best case is the elements to scan gets divided into half in each iteration n + n/2 + n/4 ..=O(2n)~O(n)
+    * Worst case is when it is in Descending order and you have to scan all the elements except the partition
+* Space Complexity: O(1)
+  * Optimal situation for Tail Recursion since it is returning and calling only quickSelect causing it to pop itself off the call stack after it is finished
