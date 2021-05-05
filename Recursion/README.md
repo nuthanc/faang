@@ -29,3 +29,12 @@
   * Same technique of finding partition and calling quicksort left of partition and right of partition
 3. Combines the solutions of sub-problems into the solution for the original problem
   * Combine all the solutions to get the sorted array
+
+### Binary Search
+
+* Time Complexity: O(logn)
+* What is log
+* log(16) = 4, how many times I can divide it till it becomes 1
+  * Here it is 4 times, when the base is 2
+  * Log is the reverse of Exponent
+  * logA(N) = B, same as A^B = N
