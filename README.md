@@ -26,10 +26,12 @@
 
 * Case sensitivity
 * Empty strings equal?
+* Repeated characters
 
 #### For numbers
 
 * +ve and -ve
+* Repeated numbers
 
 #### General
 
