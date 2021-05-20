@@ -24,3 +24,4 @@ class Solution:
             else:
                 self.binarySearch(nums, target, mid + 1, high, sol)
         return sol
+ 

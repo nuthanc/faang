@@ -37,3 +37,4 @@ def binarySearch(nums, target):
 nums = [5, 7, 7, 8, 8, 10]
 target = 11
 print(searchRange(nums, target))
+# Time Complexity is O(n) when all are the same numbers [4,4,4,4,4,4], target = 4
