@@ -26,3 +26,22 @@
 * Optimal approach is to use Subproblem of binary search again after finding the target for range low to mid-1 and mid+1 to high
   * Use 2 temp, tempL and tempR with initial values of Initial mid
   * And keep on updating those till -1 is returned
+
+### Step 4: Solution with code
+
+* Difference between my approach and author's solution is I have one call outside the loop
+  * I think this makes no difference
+  * But I think my logic of having low and high in binarySearch is optimized instead of Author's low of 0 and high of len-1
+
+### Step 5: Double check for Errors
+
+### Step 6: Walk through the Test Cases
+
+### Step 7: Space and Time Complexity
+
+* Space Complexity: O(1)
+  * No scaling data structure
+* Time Complexity: O(logn)
+  * Binary search over and over again for left and right sides but we are not running on n elements(or n times)
+  * i.e. logn+logn/2+logn/4.... = log(n)
+  * So initally log n, then log n for left side and log n for right side, so it is O(3logn) ~= O(logn)
