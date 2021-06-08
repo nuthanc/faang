@@ -24,11 +24,24 @@
 * Initialized i with 0 and compared it with level
   * If it is on the same level, elements are just appended to the list
   * If it is on a different level, then new list is created and old list is appended to the answer list
+* Author's **first questions**
+  * Is traversal necessary? YES
+  * BFS or DFS? It's BFS
+  * What differences from BFS?
+  * Compare BFS and the final answer
+    * They are the same values in order
+    * Add level to above
+  * 2 things to be done
+    * Identify level of tree
+    * Initialize our final array
+
 
 ### Step 4: Solution with code
 
 * Used in-built queue collection in python
 * **Don't know what to use for JS**
+* Author's approach
+  * Uses counter and length of queue to determine the level
 
 ### Step 5: Double check for errors
 
