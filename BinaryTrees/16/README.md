@@ -31,9 +31,13 @@
   * Compare BFS and the final answer
     * They are the same values in order
     * Add level to above
-  * 2 things to be done
+  * 3 things to be done
     * Identify level of tree
     * Initialize our final array
+    * Push array into result
+  * Queue contains only root initially, which is at level 1 and queue has length of 0
+  * This means it has only one element to process at level 1
+  * After that is removed and its children are appended, they are the elements of level 2. So the length of queue determines the level, which is equivalent to elements to process at a level 
 
 
 ### Step 4: Solution with code
@@ -42,13 +46,20 @@
 * **Don't know what to use for JS**
 * Author's approach
   * Uses counter and length of queue to determine the level
-
+  * Did initialization in while loop, whereas I did it outside
+  * Author used another while loop to separate out the regular BFS
+  * Outside while loop for the levels and the internal while loop for the regular BFS along with pushing of elements in a level
 ### Step 5: Double check for errors
 
 ### Step 6: Walk through the Test Case
 
 ### Step 7: Time and Space Complexity
 
-* Space Complexity: O(n)
-  * I think it's O(2n), where along with the node elements, additional info of level is also stored
+* Space Complexity: O(2n) ~ O(n)
+  * Scaling data structures of result, queue
+  * result will hold all elements of the tree, so O(n)
+  * queue: Size at largest is the size of the fattest level(which inside a full complete binary tree N/2)
+    * Bottom level of full bt is size of all the previous levels + 1(So, it's N/2 + 1)
+    * So Space complexity of queue is O(n/2) ~ O(n)
 * Time Complexity: O(n)
+  * Touch every node once
