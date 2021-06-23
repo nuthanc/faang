@@ -13,10 +13,20 @@
 * Right completely obstructing the left
 * Right partially obstructing the left
 * No obstruction
+![Right view](../../img/rightView.png)
+* Things to account for when coming up with Test Case
+  * There are nodes which we cannot see when we are on the Right side of the Tree
+  * Nodes also on the left branch of the Tree that are not obstructed
+  * Null case, return empty array
+  * Single value, return array with single value
 
 ### Step 3: Solution without code
 
-* Last element at every level
+* BFS Answer
+  * Last element at every level
+* DFS Answer
+  * Start with Preorder of rRL
+  * Use global counter and level passed to each node to push the result
 
 ### Step 4: Solution with code
 
