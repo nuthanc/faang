@@ -50,6 +50,10 @@
 
 * 3 main methods: findLastLevel, binarySearch and checkNodeExists
 * Using ceil and including left value
+* **Author's implementation**
+* Iterative approach
+* Return 0 at the very beginning itself if tree is empty
+* For nodeExists, he uses height of the tree to know when to stop
 
 ### Step 5: Double check for errors
 
@@ -57,8 +61,17 @@
 
 ### Step 7: Time and Space Complexity
 
-* Time Complexity: O(logn)
-  * findLastLevel Time Complexity is height of Complete Binary tree which is O(logn)
+* My Time Complexity: O(log^2n)
+  * findLastLevel Time Complexity is height of Complete Binary tree which is O(h) or O(logn)
   * binarySearch is O(logn)
   * checkNodeExists is also O(logn)
-* Space Complexity: O()
+* My Space Complexity: O(logn)
+  * Size of recursion stack
+* Author's Time Complexity: O(h^2 + h) = O(log^2 n)
+  * getTreeHeight is O(h)
+  * binarySearch in countNodes is O(log(n/2)) or log(n) which is equal to height of tree, log(h)
+    * n/2 because only last level elements
+  * nodeExists is also O(h) because it is h steps and since we are calling that in while loop(Binary search), it is O(h^2)
+  * Overall is O(h^2 + h) = O(h^2) = O(logn*logn) = O(log^2 n)
+* Author's Space Complexity is O(1)
+  * There is no Scaling data structure and Iterative approach is used
