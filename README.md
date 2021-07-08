@@ -37,3 +37,7 @@
 
 * Think of edge cases, when the variables become None
 * Don't try to change prominent variables value within another block(Use another variable)
+
+### In Recursion
+
+* Be mindful of returning the value when the recursive function is called
