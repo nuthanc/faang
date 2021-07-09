@@ -41,3 +41,15 @@
 ### In Recursion
 
 * Be mindful of returning the value when the recursive function is called
+
+### In conditions
+
+* Especially in case of numbers, add full condition
+```py
+if lastSeenValue:
+# Instead of above
+if lastSeenValue is not None:
+# This is better
+# Because in first case if lastSeenValue is 0, then it results in False which is not you expect to do
+# See validate_bs.py in 19 folder
+```
