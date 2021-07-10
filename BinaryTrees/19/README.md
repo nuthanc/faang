@@ -46,6 +46,10 @@ Both the left and right subtrees must also be binary search trees
 
 * Used lastSeenValue and valid as Global variables in JS and Instance variables in Python
 * Compared lastSeenValue with current root value and if it is lesser than or equal, return invalid
+* **My author's imp**
+* Used global valid and checking for left and right boundary comparison
+* **Author's imp**
+* Use of -Infinity and Infinity is better because in my imp, I have to check whether lt and rt is not null in each call
 
 ### Step 5: Double check for errors
 

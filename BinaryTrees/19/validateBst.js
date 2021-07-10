@@ -18,7 +18,7 @@ var isValidBST = function (root) {
   return valid;
 };
 
-var inOrder = function (root, prev) {
+var inOrder = function (root) {
   if (root && valid) {
     inOrder(root.left);
     if (lastSeenValue !== null && root.val <= lastSeenValue) {
