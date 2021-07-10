@@ -12,6 +12,7 @@ Both the left and right subtrees must also be binary search trees
 ### Step 1: Verify the Constrainsts
 
 * Will there be duplicates
+  * Yes, but it is not a valid BST
 * Can there be negative numbers
 * What about values equal to a node, should it go left or right
 * What should be the return value
@@ -22,10 +23,24 @@ Both the left and right subtrees must also be binary search trees
   * True
 * [10, 5,15,4,16,12,16,null,null,null,null,11,13,null,null,null,null,null,14]
   * False
+* null
+  * True
+* 10
+  * True
 
 ### Step 3: Solution without code
 
+* Navigate: BFS or DFS?
+  * Not BFS, because there is no established relation at the same level
+* If DFS, which one?
 * Inorder Traversal
+* **Author's approach**
+* With Inorder and Postorder, we don't know what the previous values are
+* He uses Preorder Traversal
+  * Because we process the value first and traverse later
+* When traversing left, the less than value changes to parent's value
+* When traversing right, the greater than value changes to parent'se value
+![validBST](../../img/validBST.png)
 
 ### Step 4: Solution with code
 
