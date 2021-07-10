@@ -50,6 +50,7 @@ Both the left and right subtrees must also be binary search trees
 * Used global valid and checking for left and right boundary comparison
 * **Author's imp**
 * Use of -Infinity and Infinity is better because in my imp, I have to check whether lt and rt is not null in each call
+* We can't return dfs(...) because we haven't even done dfs(node.right...) for this particular node, so *if condition* is added to the recursive call instead of *returning the recursive call itself*
 
 ### Step 5: Double check for errors
 
