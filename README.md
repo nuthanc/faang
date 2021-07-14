@@ -53,3 +53,14 @@ if lastSeenValue is not None:
 # Because in first case if lastSeenValue is 0, then it results in False which is not you expect to do
 # See validate_bs.py in 19 folder
 ```
+
+### Recursion
+
+* For Bubbling up of values, if recursive calls alone doesn't satisfy, use conditions to return
+```js
+if (node.left) {
+    if (!dfs(node.left, min, node.val)) { // We can't return dfs(...) because we haven't even done dfs(node.right...) for this particular node, so if condition is added to the recursive call instead of return the recursive call itself
+      return false;
+    }
+}
+```
