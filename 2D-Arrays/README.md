@@ -11,7 +11,12 @@
 * With 2D-arrays, 4 directions: up, down, left or right
 * With DFS, traverse in the same direction
 * With 2D-Arrays, **DFS** is explore as far as in one of the 4 directions until you hit a wall or going back to element we have already explored
+![dfs2d](../img/dfs2d.png)
+![dfs2d](../img/dfs2d2.png)
 * With 2D-Arrays, my dfs implementation is read, Up, Right, Down and Left
+* With 2D-Arrays, **BFS** is *expanding in a ring* from our starting element taking the immediate vicinity elements(Up, Right, Down and Left) and putting them in a queue
+![bfs2d](../img/bfs2d.png)
+![bfs2d](../img/bfs2d2.png)
 
 ### Author's DFS Implementation
 
