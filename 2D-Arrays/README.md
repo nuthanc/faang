@@ -23,8 +23,19 @@
 * DS used
   * directions Array of Arrays
   * seen Array of Arrays
-* Time Complexity: O(n)
+* Time Complexity: O(N)
   * We are going to touch every element once
-* Space Complexity: O(n)
+* Space Complexity: O(N)
   * seen data structure
   * As well as recursive stack may be holding all of the elements
+
+### Author's BFS Implementation
+
+* He checks for bounds at the start itself, whereas I do it at the end
+* Time Complexity: O(N)
+  *  We are going to touch every element once
+* Space Complexity: O(N)
+  * seen data structure, this is the worst case
+  * values: Only bfs through them and not store them in actual
+  * queue also values only till Next level(Shown in diagram below)
+![nextLevel](../img/nextLevel.png)
