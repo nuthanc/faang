@@ -38,4 +38,23 @@
 
 ### Step 4: Solution with code
 
-* 
+* Use nested array for traversing sequentially
+* When '1' is encountered, increment count and convertOldIslands
+* In converOldIslandds, using bfs or dfs convert all neighboring elements of 1 to 0
+* **Author's approach**
+* Check initially if matrix length is 0 and return 0
+* In BFS, author adds check for up, down, left and right before adding to queue
+* Author doesn't use **seen** at all
+
+### Step 5: Double check for Errors
+
+### Step 6: Walk through the Test cases
+
+### Step 7: Space and Time Complexity
+* Time Complexity: O(n)
+  * Traversing all elements sequentially
+  * O(N) for BFS, so O(2N) or O(m*n) where m-row, n-col
+* Space Complexity: O(min(m,n)) in BFS and O(m*n) in DFS
+  * For DFS which is Recursive, call stack may hold all elements in worst case
+  * For BFS, queue holds values only till Next level, so S: O(min(m,n))
+* **Space more optimal in BFS**
