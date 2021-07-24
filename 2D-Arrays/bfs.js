@@ -42,6 +42,6 @@ matrix = [
 
 seen = new Array(matrix.length)
   .fill(false)
-  .map(() => new Array(matrix[1].length).fill(false));
+  .map(() => new Array(matrix[0].length).fill(false));
 
 console.log(bfs(matrix, 2, 2, seen));

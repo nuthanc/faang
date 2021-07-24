@@ -3,6 +3,17 @@
 ![2d](../img/2d.png)
 * Array containing arrays
 * Row, col
+* Check **Approach for 2d arrays in approach.md**
+* Python filling 2d arrays
+```py
+[[0] * col for _ in range(row)]
+```
+* JS filling 2d arrays
+```js
+const seen = new Array(matrix.length)
+    .fill(0)
+    .map(() => new Array(matrix[0].length).fill(false));
+```
 
 ### DFS and BFS in 2D-Arrays
 
