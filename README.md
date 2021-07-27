@@ -64,3 +64,7 @@ if (node.left) {
     }
 }
 ```
+
+### 2d Arrays
+
+* Be careful with row and col variables, don't reassign it if you are iterating with the same variable names
