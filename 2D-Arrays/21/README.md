@@ -38,26 +38,28 @@ Return the minimum number of minutes that must elapse until no cell has a fresh 
   * Else
     * Return -1
 * **Author's Approach**
-* Subproblems
-  * Keep track of minutes for all fresh to rot
-    * The rotting occurs in a ring fashion level by level(suggesting BFS)
-  * Need to figure out where and how many all of the original rotting oranges are 
-  * Also need to figure out where Fresh oranges cannot be reached
-    * This is a separate problem from the others
-    * So, either we can keep track of fresh oranges in the beginning or after all the rotting is done
-* Sequential order
-  * Rotting oranges: Add these to queue
-  * Track of Fresh oranges
-* Rotting Fresh, decreasing Fresh count and keeping track of minutes
-  * Use BFS to rot fresh and decrease Fresh count and add to Queue
-  * Use similar logic in level order traversal to keep track of minutes
-    * Have length of queue in a variable and increment minute when queue_length equals zero and recalculate queue_length
-    * *Note*: We shouldn't increment count when there are no more fresh oranges in the vicinity(or the very last level)
-* If Fresh oranges count is greater than 0 when queue is empty return -1 else return minutes
+* Keep track of minutes for all fresh to rot
+  * The rotting occurs in a ring fashion level by level(suggesting BFS)
+* Need to figure out where and how many all of the original rotting oranges are 
+* Also need to figure out where Fresh oranges cannot be reached
+  * This is a separate problem from the others
+  * So, either we can keep track of fresh oranges in the beginning or after all the rotting is done
+* **Subproblems**
+  * Sequential order
+    * Rotting oranges: Add these to queue
+    * Track of Fresh oranges
+  * Rotting Fresh, decreasing Fresh count and keeping track of minutes
+    * Use BFS to rot fresh and decrease Fresh count and add to Queue
+    * Use similar logic in level order traversal to keep track of minutes
+      * Have length of queue in a variable and increment minute when queue_length equals zero and recalculate queue_length
+      * *Note*: We shouldn't increment count when there are no more fresh oranges in the vicinity(or the very last level)
+    * If Fresh oranges count is greater than 0 when queue is empty return -1 else return minutes
 
 ### Step 4: Solution with code
 
 * Use BFS technique for better space complexity
+* **Author's approach**
+* He used constants for Rotten, Fresh and Empty
 
 ### Step 5: Double check for Errors
 
@@ -66,8 +68,13 @@ Return the minimum number of minutes that must elapse until no cell has a fresh 
 ### Step 7: Time and Space Complexity
 
 * Time Complexity in my case: O(n^2) Not sure
-  * Sequential traversing: O(n)
-  * BFS is O(n)
+  * Sequential traversing: O(m*n) or O(n), n is total size of the 2d array
+  * BFS is O(n) and since this is nested within sequential, i think it's O(n^2)
 * Space Complexity in my case: O(n)
   * cost_matrix is O(n)
   * queue is O(min(m,n))
+* Author's Time Complexity: O(n)
+  * Double for loop for fresh_count and pushing to queue(Touch every element once): O(n)
+  * BFS: Even while loop touches every element once in worst case(Every element is a rotting orange): O(n)
+* Author's Space Complexity: O(n)
+  * Storing rotten oranges to queue

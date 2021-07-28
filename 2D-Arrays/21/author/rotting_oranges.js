@@ -7,8 +7,8 @@ const directions = [
 
 var orangesRotting = function (grid) {
   if (grid.length === 0) return 0;
-  q = [];
-  fresh_count = 0;
+  const q = [];
+  let fresh_count = 0;
   for (let row = 0; row < grid.length; row++) {
     for (let col = 0; col < grid[0].length; col++) {
       if (grid[row][col] === 2) q.push([row, col]);
@@ -16,9 +16,9 @@ var orangesRotting = function (grid) {
     }
   }
 
-  minutes = 0;
+  let minutes = 0;
   while (q.length > 0) {
-    qlen = q.length;
+    let qlen = q.length;
     while (qlen > 0) {
       const [row, col] = q.shift();
       qlen--;
