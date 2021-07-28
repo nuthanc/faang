@@ -22,6 +22,7 @@
 
 * Don't memorize the solution
 * **Critical thinking process of breaking apart the question to identify subproblems and how you can solve it and put it all together** 
+  * Check Question 21(Rotting oranges README) for this
 
 ### Constraints in General
 
