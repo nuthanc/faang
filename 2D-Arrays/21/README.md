@@ -45,6 +45,7 @@ Return the minimum number of minutes that must elapse until no cell has a fresh 
   * This is a separate problem from the others
   * So, either we can keep track of fresh oranges in the beginning or after all the rotting is done
 * **Subproblems**
+![subproblems](../../img/rotting.png)
   * Sequential order
     * Rotting oranges: Add these to queue
     * Track of Fresh oranges
