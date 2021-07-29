@@ -40,6 +40,9 @@
 
 ### Step 4: Solution with code
 
+* Author's Implementation
+* We can skip the null check as we are returning the matrix
+
 ### Step 5: Double Check for Errors
 
 ### Step 6: Walk through the Test cases
@@ -48,3 +51,9 @@
 
 * Time Complexity: O(n)
 * Space Complexity: O(n)
+* Author's
+* Time Complexity: O(n)
+  * Sequential search: O(n)
+  * DFS inside of Sequential search: Touch every element once in worst case, but once it touches it has a value and all of the subsequent gates might not modify the value, at worst it would add a very minor factor which we are gonna drop
+* Space Complexity: O(n)
+  * Recursive size of entire 2d array in worst case

@@ -9,7 +9,7 @@ const directions = [
   [0, -1],
 ];
 
-var shortest_path = function (matrix) {
+const shortest_path = function (matrix) {
   for (let row = 0; row < matrix.length; row++) {
     for (let col = 0; col < matrix[0].length; col++) {
       if (matrix[row][col] === GATE) {
@@ -20,8 +20,8 @@ var shortest_path = function (matrix) {
   console.log(matrix);
 };
 
-var dfs = function (matrix, row, col, distance) {
-  for (let direction of directions) {
+const dfs = function (matrix, row, col, distance) {
+  for (const direction of directions) {
     const nextRow = row + direction[0];
     const nextCol = col + direction[1];
 

@@ -8,3 +8,7 @@
 * Do I need to traverse? If yes
   * BFS or DFS
   * But mostly it will be in sequential order
+* What do we do with the values traversed
+  * Store in a queue or array?
+  * Count values?
+  * Or when some value is encountered, perform some operations(subproblem)

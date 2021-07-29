@@ -68,9 +68,9 @@ Return the minimum number of minutes that must elapse until no cell has a fresh 
 
 ### Step 7: Time and Space Complexity
 
-* Time Complexity in my case: O(n^2) Not sure
+* Time Complexity in my case: O(n) Not sure
   * Sequential traversing: O(m*n) or O(n), n is total size of the 2d array
-  * BFS is O(n) and since this is nested within sequential, i think it's O(n^2)
+  * BFS is O(n) and since this is nested within sequential touches every element, but checking next question we see this is a minor factor and is dropped
 * Space Complexity in my case: O(n)
   * cost_matrix is O(n)
   * queue is O(min(m,n))
