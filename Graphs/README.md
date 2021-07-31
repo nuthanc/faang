@@ -32,3 +32,4 @@
 
 ### DFS
 
+![dfsGraph](../img/dfsAL.png)
