@@ -55,6 +55,10 @@ Return the number of minutes needed to inform all the employees about the urgent
   * So use adjacency list
 * Next, what traversal? BFS or DFS
   * We can use anything, as they both have O(n) space and time complexity
+* Author uses DFS as it is more simple
+* For DFS, base case is
+  * When there are no subordinates, return 0
+  * Else, get the maximum value from the subordinates and then add inform time of employee
 
 
 ### Step 4: Solution with code
@@ -64,3 +68,15 @@ Return the number of minutes needed to inform all the employees about the urgent
 ### Step 6: Walk through the Test Cases
 
 ### Step 7: Time and Space Complexity
+
+* Time Complexity: O(n)
+  * O(3n), 1 in empty adjList creation, another in populating adjList and finally in dfs
+* Space Complexity: O(n)
+  * O(3n)
+  * With dfs, stack is O(n) when it is skewed
+  * Atleast n arrays in adjList, so O(n) here
+  * Values inside the adjacency list
+    * Consider the relationship between the vertices
+    * Nodes connected only in one direction(Manager Subordinate relationship)
+    * No sharing of subordinates or managers
+    * Every arrays can only hold same value once, no values get repeated across inner arrays of the adjList, so this is O(n)
