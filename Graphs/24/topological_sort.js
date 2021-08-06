@@ -31,5 +31,5 @@ var canFinish = function (numCourses, prerequisites) {
     }
   }
 
-  return num === numCourses ? true : false;
+  return num === numCourses;
 };

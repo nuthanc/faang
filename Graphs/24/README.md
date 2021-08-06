@@ -42,7 +42,8 @@ Return true if you can finish all courses. Otherwise, return false.
 * It is based on In-degree(Connections coming into a node)
 * Initially, In-degree is calculated for each node
 * Any node with In-degree 0 is pushed to the result and other nodes' In-degree count is reduced to whichever this node was pointing to
-* 
+* We keep on repeating this process until there are no nodes traversed or no nodes with In-degree 0
+* If all nodes are not traversed, then there is a Loop or Cycle
 
 ### Step 4: Solution with code
 
@@ -71,3 +72,13 @@ const adjList = new Array(numCourses).fill(0).map(() => []);
       * Nested, every node points to every other node
     * Queue, O(n)
     * Seen, O(n)
+* Author's Topological sort
+  * Time Complexity: O(p + n^2)
+    * O(n) for empty adjList creation
+    * O(p) for filling of adjList and indegree, p being the the length of prerequisite pairs
+    * O(n) for looping through indegree array
+    * O(n^2) for while loop's stack, every vertex one time and inner for loop, worst case (n, n-1, n-2 ...which is pretty much n)
+  * Express meaningfully beyond a worst case scenario, for an Adjacency list it's n + E (n arrays inside adjList and E is the total number of edges there are in the Graph)
+  * Space Complexity: O(n^2) or O(n+E)
+    * adjList: O(n^2) or O(n+E)
+    * stack: O(n)

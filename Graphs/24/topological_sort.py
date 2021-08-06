@@ -22,5 +22,5 @@ class Solution:
                     stack.append(node)
         
         return True if num == numCourses else False
-# Time : O(n)
+# Time : O(n^2)
 # Space: O(n^2)
