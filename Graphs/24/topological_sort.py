@@ -1,6 +1,3 @@
-from collections import deque
-
-
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         adjList = [[] for _ in range(numCourses)]
