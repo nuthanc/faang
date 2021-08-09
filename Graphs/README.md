@@ -54,3 +54,8 @@
   * If we can directly travel from start node, then we update that value, else leave as it is
   * Close off the starting node, we are never going back to it
 * Next choose the smallest value in the Array and repeat the above process and updating only if it shorter than the previous
+
+### Cons of Dijkstra's Algorithm
+
+* Cannot handle negative weights
+  * We close off a node and never visit it back

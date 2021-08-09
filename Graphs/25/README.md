@@ -27,4 +27,30 @@ We will send a signal from a given node k. Return the time it takes for all the 
 * If the question asks for Shortest path for a given source node in a Weighted directed Graph, then we already have 2 algorithms for it
 * DFS and BFS are very verbose and time-consuming
 * Check Dijkstra's algorithm in Graphs README
-* 
+* I used lists instead of Priority Queue
+* Check author folder for Priority Queue Implementation
+
+### Step 4: Solution with Code
+
+* Python has a library for Min Heap(heapq), so use that
+
+### Step 5: Double Check for Errors
+
+### Step 6: Walk through the Test Cases
+
+### Step 7: Time and Space Complexity
+
+* Does not matter whether there are Cycles in the Graph
+* Worst possible Graph we could receive is a Complete Graph(Every vertex connects to every other vertex)
+* Author's
+* Time Complexity
+  * O(2n) for distances array and also adjList, n is the number of vertices
+  * O(E) for iterating times array, where E is the number of edges
+  * In the Heap(while loop), we can pull out E potential values and push and pop is O(logE), so it's ElogE
+    * What is the Heap containing? Edges
+  * So it's O(2n+E+ElogE): O(n+ElogE)
+    * E in worst case can be n^2
+* Space Complexity: O(n+2E): O(n+E)
+  * Distances: O(n)
+  * adjList: O(E)
+  * Heap: O(E)
