@@ -13,6 +13,7 @@ We will send a signal from a given node k. Return the time it takes for all the 
 * Empty graph
 * Can time(weight) be negative integers
   * No
+  * If yes, then ask for Negative cycles
 
 ### Step 2: Write out some test cases
 
@@ -42,8 +43,8 @@ We will send a signal from a given node k. Return the time it takes for all the 
 
 * Does not matter whether there are Cycles in the Graph
 * Worst possible Graph we could receive is a Complete Graph(Every vertex connects to every other vertex)
-* Author's
-* Time Complexity
+* **Author's Dijkstra's**
+* Time Complexity: O(n+ElogE)
   * O(2n) for distances array and also adjList, n is the number of vertices
   * O(E) for iterating times array, where E is the number of edges
   * In the Heap(while loop), we can pull out E potential values and push and pop is O(logE), so it's ElogE
@@ -53,4 +54,14 @@ We will send a signal from a given node k. Return the time it takes for all the 
 * Space Complexity: O(n+2E): O(n+E)
   * Distances: O(n)
   * adjList: O(E)
+    * Not required just like Bellman
   * Heap: O(E)
+
+* **Author's Bellman-Ford's**
+* Time Complexity: O(n+nE) ~ O(nE)
+  * distances: O(n)
+  * Outer for loop: O(n)
+    * Inner for times loop: O(E), where E is the number of edges
+  * Space Complexity: O(n)
+    * Distances array
+* *Dijkstra's is faster*

@@ -75,3 +75,18 @@ if (node.left) {
 ### 2d Arrays
 
 * Be careful with row and col variables, don't reassign it if you are iterating with the same variable names
+
+### Topological Sort
+
+* Indegree
+* Detection of cycles
+
+### Dijkstra's Algorithm
+
+* Greedy
+* Priority Queue
+
+### Bellman Ford's Algorithm
+
+* Dynamic
+* n-1 iteration over Edges
