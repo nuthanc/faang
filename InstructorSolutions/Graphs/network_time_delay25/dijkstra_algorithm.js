@@ -84,16 +84,23 @@ class PriorityQueue {
   }
 }
 
+// const t = [
+//   [1, 2, 9],
+//   [1, 4, 2],
+//   [2, 5, 1],
+//   [4, 2, 4],
+//   [4, 5, 6],
+//   [3, 2, 3],
+//   [5, 3, 7],
+//   [3, 1, 5],
+// ];
+
 const t = [
-  [1, 2, 9],
-  [1, 4, 2],
-  [2, 5, 1],
-  [4, 2, 4],
-  [4, 5, 6],
-  [3, 2, 3],
-  [5, 3, 7],
-  [3, 1, 5],
-];
+  [1,2,5],
+  [1,3,2],
+  [2,3,-10],
+  [3,4,6]
+]
 
 const networkDelayTime = function (times, N, k) {
   const distances = new Array(N).fill(Infinity);
@@ -112,7 +119,8 @@ const networkDelayTime = function (times, N, k) {
 
   while (!heap.isEmpty()) {
     const currentVertex = heap.pop();
-
+    console.log(currentVertex);
+    console.log(distances);
     const adjacent = adjList[currentVertex];
     for (let i = 0; i < adjacent.length; i++) {
       const neighboringVertex = adjacent[i][0];
@@ -129,4 +137,4 @@ const networkDelayTime = function (times, N, k) {
   return ans === Infinity ? -1 : ans;
 };
 
-console.log(networkDelayTime(t, 5, 1));
+console.log(networkDelayTime(t, 4, 1));

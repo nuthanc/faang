@@ -11,6 +11,7 @@
 * 5 interview, 1 hour each
   * 4 technical
   * 1 cultural/personality fit
+* Author: Yihua Zhang
 
 #### 3 keys to Technical Interview
 
