@@ -89,4 +89,4 @@ if (node.left) {
 ### Bellman Ford's Algorithm
 
 * Dynamic
-* n-1 iteration over Edges
+* n-1 iteration over Edges and store minimum path cost

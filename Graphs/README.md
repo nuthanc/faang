@@ -36,7 +36,7 @@
 
 ### Dijkstra's Algorithm
 
-* Greedy method Algorithm
+* **Greedy method Algorithm**
   * It's an algorithm paradigm(way that we tackle problems)
   * Only applies when working with Optimization problems(Max or Min value)
   * If decision needs to be made between all the options, it picks the one that gets to the optimum solution
@@ -68,7 +68,7 @@
 
 ### Bellman-Ford's Algorithm
 
-* Dynamic Programming
+* **Dynamic Programming**
   * 100% accuracy is calculate every single value and then pick the value that is the smallest(or largest)
   * All possibilities, but store repetative work
   * Memoization: Store values so that we could reuse it later
