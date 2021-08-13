@@ -92,3 +92,37 @@ Return the probability that the knight remains on the board after it has stopped
     * Stack for 8^k recursive calls
 
 ### Step 8: Optimize Solution
+
+* Massive State Space Tree if we want to draw it
+  * So use our intuition and logical thinking and guide our throughts by looking at the Recurrence relation formula
+* How do we store to Memoize
+  * Let's take for n=6, k=3, r=2, c=2
+  * How many positions will our knight be in when k=3(Thinking from Top Down approach)
+    * Only 1, because the knight starts at this position and hasn't taken any steps yet
+    * When k=2, the knight could be in 8 possible places, since it starts from only 1 position
+    * From k=1, we have to consider from previous k=2, there were 8 position
+    * Need to think whether there are any overlaps from the steps which we took from the same k value
+      * If it is then the remaining paths that we need to explore will be the same, so the same probability
+* Use k value to determine the Grid that we store
+* We need a 2Grid for every k value
+  * k+1 Array because our Grid array is 0 indexed whereas our steps are not
+  * Add +1 to get the actual corresponding index to match the step we are receiving
+* Main thing to realize
+  * Initialize an Array of 2d Arrays
+  * The Array is going to hold the 2d array state at every given step of k
+  * And we are building from the top down, i.e. when k is at maximum step
+  * But in order to figure out the probability of all of the different positions the knight is in, which is only 1 position when k=3, we need to calculate the probability of the other steps at k=2
+  * From k=2 different steps probability, we have to figure out what are the probabilities of those steps by combining them with all of the probability of k=1 of all the different steps we could have reached when k=2
+  * Once we go Top down and figure out all of the different probabilities, we come back up and add all those values together and we just make sure not to duplicate any of our steps that were extra to take, by storing them inside of the dp
+  * **Crux of the calculation is dependent on k**
+    * k is what dictates that there are overlapping steps
+* Time Complexity: O(n^2*k)
+  * Iterating over k different steps
+  * At every step, how many different recursive calls can we make
+  * How many values can we fill for that given step?
+  * In worst case where we have a lot of steps, you can imagine that we propogate a bunch of steps down and we end up filling every single value in the 2d Grid, because every value might be able to be reached every single Grid cell
+  * n^2 different values we can fill for that Grid
+  * At the same time, every single step down is represented by a brand new Grid
+  * At a certain point, we overlap over every single cell in the Grid and for every level that might happen
+* Space Complexity: O(n^2*k)
+  * Size of dp
