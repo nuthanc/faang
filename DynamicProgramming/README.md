@@ -4,8 +4,10 @@
 
 ### How to Recognize it's a Dynamic Programming Problem
 
-* Most of the times, Optimization questions(MinMax) are DP problems and also Questions that require Memoization(Storage for future reference)
+* Most of the times, **Optimization questions**(MinMax) are DP problems and also Questions that require Memoization(Storage for future reference)
   * Among all possible solutions, you picking the best one
+* Also Questions, where we explore all possible options and combine them together
+  * i.e **It optimizes the process of generating all of the possible solutions that exist**
 * Not all problems that have DP as a potential solution require DP as a solution
 * With Optimization questions,
   * we need to generate all of the possible paths that we can take
