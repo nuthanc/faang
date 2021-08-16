@@ -53,7 +53,7 @@ Return the probability that the knight remains on the board after it has stopped
   * The fact that we need to generate all the possible paths tell you that DP can probably help you
   * Main thing we need to see here is whether or not there is an *overlap* in the possible paths we can take
   * Run through a simulation and force the knight to take an overlapping path along its way of taking different unique paths
-  * [Overlapping path](../../img/op.png)
+  * ![Overlapping path](../../img/op.png)
   * There is Wasted steps that we could make and DP can help us out
 * Get the Recurrence relation
   * To begin, we need to get a Generic formula that guides our logic of how our Recursive solution works
@@ -93,8 +93,9 @@ Return the probability that the knight remains on the board after it has stopped
 
 ### Step 8: Optimize Solution
 
+#### Top Down Recursive
 * Massive State Space Tree if we want to draw it
-  * So use our intuition and logical thinking and guide our throughts by looking at the Recurrence relation formula
+  * So use our intuition and logical thinking and guide our thoughts by looking at the Recurrence relation formula
 * How do we store to Memoize
   * Let's take for n=6, k=3, r=2, c=2
   * How many positions will our knight be in when k=3(Thinking from Top Down approach)
@@ -126,3 +127,44 @@ Return the probability that the knight remains on the board after it has stopped
   * At a certain point, we overlap over every single cell in the Grid and for every level that might happen
 * Space Complexity: O(n^2*k)
   * Size of dp
+
+#### Bottom Up Iterative
+
+* We are trying to build towards the final solution
+* What we are building is dependent on what we are storing
+* In order to evaluate what we are storing, it is based of the recurrence relation as well as the recursive solution
+* What we are storing in our dp in Recursive solution?
+  * We have a array that contains numerous different 2D Grids
+  * These 2D grids represent the values that you can reach from the previous step at k
+* k is the main thing that drives our Recursion
+* What you do with this k value is you subtract it and pass it down
+* The size of the Recursion is equal to k(maximum depth)
+* What we need to figure out is utilize this k value differently and build from the bottom up instead
+* In Top Down, we are starting k=3 and going all the way to k=0
+* Is there a way where we can go from k=0 to k=3(IN our example case)
+* Think about How do I build layer by layer so that I get all of the steps that I need for one level of k before I move up to the next level
+* Because once I have all of the values that I need for k=0, then it's easy to build for k=1
+* Once I have values for k=1 and k=0, can I use them, whether I require one layer or both layers to build k=2
+* The idea is you are constantly trying to figure out if you can encode the entire level before moving on to the next level
+* **Add more notes later in video 169**
+  
+##### **Keywords for now**
+* Store?
+  * What
+  * Based off
+* Build layer by layer
+* Hints from Recursive solution
+* Leverage what you have stored in previous level for Bottom Up
+* Very first grid is k=0
+* When knight is placed on the board for the first time, we are not taking any steps, so this is the starting point, i.e k=0. The probability of that initial row, column is 1 and rest all are 0
+* Then build from the previous Grids as shown below
+  * Reachability from Previous Grid cell
+* ![buildFromPrevious](../../img/build.png)
+
+##### Iterative
+
+```txt
+* Time Complexity: O(8*k*2n^2) ~ O(k*n^2)
+* Space Complexity: O(n^2*k)
+```
+* Further optimize by maintaining only 2 Grids, i.e. previous and current
