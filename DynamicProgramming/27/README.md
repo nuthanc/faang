@@ -168,3 +168,7 @@ Return the probability that the knight remains on the board after it has stopped
 * Space Complexity: O(n^2*k)
 ```
 * Further optimize by maintaining only 2 Grids, i.e. previous and current
+```txt
+* Time Complexity: O(8*k*2n^2) ~ O(k*n^2)
+* Space Complexity: O(n^2*2) ~ O(n^2)
+```
