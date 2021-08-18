@@ -70,6 +70,12 @@ if (node.left) {
       return false;
     }
 }
+
+// Backtracking example, solveBacktrack is recursive function
+// This condition decides to do rest of the computation or that's it for this call stack
+if (solveBacktrack(board, boxes, rows, cols, nextRow, nextCol)) {
+  return true;
+}
 ```
 
 ### 2d Arrays

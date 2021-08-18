@@ -8,7 +8,7 @@
 
 ### Palindromes
 
-* A Palindrome is a string that reads the same forwardds and backwards
+* A Palindrome is a string that reads the same forwards and backwards
 * E.g: "aba", "madam", "a", "race car"(ignore the space), ""  etc
 * Even "A man, a plan, a canal: Panama" is a Palindrome when ignoring space, comma and colon
 * To know whether it's a palindrome or not, one method is
