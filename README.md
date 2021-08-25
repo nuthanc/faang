@@ -24,6 +24,7 @@
 * Don't memorize the solution
 * **Critical thinking process of breaking apart the question to identify subproblems and how you can solve it and put it all together** 
   * Check Question 21(Rotting oranges README) for this
+  * Use **Reverse Psychology**, check longestCommonSubsequence in DP
 
 ### Constraints in General
 
@@ -96,3 +97,37 @@ if (solveBacktrack(board, boxes, rows, cols, nextRow, nextCol)) {
 
 * Dynamic
 * n-1 iteration over Edges and store minimum path cost
+
+### Dynamic Programming
+
+* While Memoizing, during recursive call store current calculation in that call itself and don't pass to arguments
+  * Else, this would mess up during storage(Memoize)
+```py
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        lcs = self.longest_common_subsequence(word1, word2, 0, 0, 0)
+        return len(word1) + len(word2) - 2 * lcs
+
+    def longest_common_subsequence(self, word1, word2, i, j, lcs):
+        if i == len(word1) or j == len(word2):
+            return lcs
+        if word1[i] == word2[j]:
+            return self.longest_common_subsequence(word1, word2, i+1, j+1, lcs + 1) # Here lcs is incremented in the argument
+        else:
+            return max(self.longest_common_subsequence(word1, word2, i+1, j, lcs), self.longest_common_subsequence(word1, word2, i, j+1, lcs))
+# The above approach of passing lcs messes up during Memoizing
+
+# So use the below approach
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        lcs = self.longest_common_subsequence(word1, word2, 0, 0)
+        return len(word1) + len(word2) - 2 * lcs
+
+    def longest_common_subsequence(self, word1, word2, i, j):
+        if i == len(word1) or j == len(word2):
+            return 0
+        if word1[i] == word2[j]:
+            return 1 + self.longest_common_subsequence(word1, word2, i+1, j+1)
+        else:
+            return max(self.longest_common_subsequence(word1, word2, i+1, j), self.longest_common_subsequence(word1, word2, i, j+1))
+```

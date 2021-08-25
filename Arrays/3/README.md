@@ -18,7 +18,7 @@
 
 ### Step 3: Solution without code
 
-* This question requires to uitilize the entire array to generate a solution unlike the previous question
+* This question requires to utilize the entire array to generate a solution unlike the previous question
 * Smaller height out of the 2(Similar to previous question)
 * Formula: currentWater = min(maxLeft, maxRight) - currentHeight
 
