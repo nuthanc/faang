@@ -63,7 +63,7 @@
 * https://stackoverflow.com/questions/6799172/negative-weights-using-dijkstras-algorithm/6799344#6799344
 * But Author's implementation solves the above but doesn't give the correct result
 * The logic of our *if condition* that checks the weight of that node against the current path that determines if we relax that node further we can guarantee will never actually pass after that nodes already been processed before due to the greedy method logic!
-* This however changes if we have *negative weights*, as I explain in the video the code may still run and you can definitely have a case where the same node is not only pushed in the heap *multiple times*, but fully processed as well because it could pass that conditional if statement since there’s no guarantee anymore that our greedy method logic is still relevant. The node could indeed have a lower weight from a new path coming into it due to the presence of negative weights. I**f there aren’t any negative cycles in the graph**, our dijkstras code can in fact *still solve the question*, but you are no longer guaranteed the time complexity from before (which is achieved with the aforementioned greedy method guaranteeing that we don’t FULLY process the same node more than once). For this reason we switch over to using bellman Ford
+* This however changes if we have *negative weights*, as I explain in the video the code may still run and you can definitely have a case where the same node is not only pushed in the heap *multiple times*, but fully processed as well because it could pass that conditional if statement since there’s no guarantee anymore that our greedy method logic is still relevant. The node could indeed have a lower weight from a new path coming into it due to the presence of negative weights. **If there aren’t any negative cycles in the graph**, our dijkstras code can in fact *still solve the question*, but you are no longer guaranteed the time complexity from before (which is achieved with the aforementioned greedy method guaranteeing that we don’t FULLY process the same node more than once). For this reason we switch over to using bellman Ford
 
 
 ### Bellman-Ford's Algorithm
@@ -87,9 +87,10 @@
 * Given, Source vertex the lowest cost path to every other vertex
 * Reduce to question to understand the Memoization aspect
 * From a particular source vertex, what is the lowest costing path to any random vertex(Pick worst case scenario)
-  * In the worst case scenario, what is the most number of edges that we will traverse through in order to get to a vertex(Furtest vertex)
+  * In the worst case scenario, what is the most number of edges that we will traverse through in order to get to a vertex(Furthest vertex)
   * We don't wanna run in cycles, cause that's just wasting steps
   * If we consider the below diagram, it's 1 to 4, 4 to 2, 2 to 5 and 5 to 3(Notice that we are walking through every single vertex(n-1))
+  * ![ndt](../img/ndt.png)
 * Analyze the question even further
   * If we are trying out to figure the shortest possible path to some specific target vertex, we do need to explore all of the paths available
   * There are n-1 edges to pass through in the worst possible path, but there might be numerous n-1 paths and much significantly shorter paths also
