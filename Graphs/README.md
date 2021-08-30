@@ -61,7 +61,7 @@
   * We close off a node and never visit it back
 * So, we use Bellman-Ford's Algorithm
 * https://stackoverflow.com/questions/6799172/negative-weights-using-dijkstras-algorithm/6799344#6799344
-* But Author's implementation solves the above
+* But Author's implementation solves the above but doesn't give the correct result
 * The logic of our *if condition* that checks the weight of that node against the current path that determines if we relax that node further we can guarantee will never actually pass after that nodes already been processed before due to the greedy method logic!
 * This however changes if we have *negative weights*, as I explain in the video the code may still run and you can definitely have a case where the same node is not only pushed in the heap *multiple times*, but fully processed as well because it could pass that conditional if statement since there’s no guarantee anymore that our greedy method logic is still relevant. The node could indeed have a lower weight from a new path coming into it due to the presence of negative weights. I**f there aren’t any negative cycles in the graph**, our dijkstras code can in fact *still solve the question*, but you are no longer guaranteed the time complexity from before (which is achieved with the aforementioned greedy method guaranteeing that we don’t FULLY process the same node more than once). For this reason we switch over to using bellman Ford
 

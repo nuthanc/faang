@@ -98,6 +98,12 @@ if (solveBacktrack(board, boxes, rows, cols, nextRow, nextCol)) {
 * Dynamic
 * n-1 iteration over Edges and store minimum path cost
 
+### Backtracking
+
+* Addition
+* Decision
+* Removal
+
 ### Dynamic Programming
 
 * While Memoizing, during recursive call store current calculation in that call itself and don't pass to arguments
