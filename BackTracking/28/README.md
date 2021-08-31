@@ -19,7 +19,7 @@ The '.' character indicates empty cells.
 ### Step 3: Solution without Code
 
 * Value being added is valid is the main logic
-* Core of the problem in BT is Decision and little nuances like the Constrainsts for the question
+* Core of the problem in BT is Decision and little nuances like the Constraints for the question
 
 ### Step 7: Time and Space Complexity
 
