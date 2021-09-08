@@ -187,7 +187,19 @@ const solve = (startingIdx, S, partialSplits, result) => {
     }        
   }
 }
-
-Putting it all together, our final answer is below!
- */
 ```
+
+### Time and Space Complexity of Backtracking solution
+
+* Time Complexity : O(N.2^N),
+  * where N is the length of string s. This is the worst-case time complexity when all the possible substrings are palindrome.
+  * For each substring, it takes O(N) time to generate substring and determine if it a palindrome or not.
+* Example
+![palPart](../../img/palPart.png)
+* Space Complexity: O(N), where N is the length of the string s. This space will be used to store the recursion stack. For s = aaa, the maximum depth of the recursive call stack is 3 which is equivalent to N.
+
+### Time and Space Complexity of Backtracking solution with DP
+
+* Time Complexity : O(N.2^N),
+  * where N is the length of string s. In the worst-case there could be 2^N possible substrings and it will O(N) time to generate substring using splice. However, we are eliminating one additional iteration to check if substring is a palindrome or not
+* Space Complexity: O(N.N), where where N is the length of the string s. The recursive call stack would require N space as in Approach 1. Additionally we also use 2 dimensional array dp of size N⋅N

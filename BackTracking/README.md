@@ -7,6 +7,7 @@
     * This is different from an Optimization question(one solution amongst all of the solutions)
 * Very logical, almost Brute Force solution
 * If the path being explored has violated the Constraint, then you are not going down that path anymore
+* DFS is associated with Backtracking
 
 ### Example
 
