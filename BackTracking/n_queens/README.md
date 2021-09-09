@@ -38,3 +38,15 @@ Each solution contains a distinct board configuration of the n-queens' placement
   * Removal
 
 ### Step 4: Solution with code
+
+* Decision and adding board to a separate array called result is the main thing
+
+### Step 5: Double check for Errors
+
+### Step 6: Walk through the Test Case
+
+### Step 7: Time and Space Complexity
+
+* Time Complexity: I think O(n.n!)
+* Space Complexity: O(n)
+  * Max depth of recursive stack is till n
