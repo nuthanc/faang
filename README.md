@@ -25,6 +25,7 @@
 * **Critical thinking process of breaking apart the question to identify subproblems and how you can solve it and put it all together** 
   * Check Question 21(Rotting oranges README) for this
   * Use **Reverse Psychology**, check longestCommonSubsequence in DP
+    * When a problem says Source to Destination, you can use reverse psychology to thing Destination to Source
 
 ### Constraints in General
 
@@ -100,11 +101,29 @@ if (solveBacktrack(board, boxes, rows, cols, nextRow, nextCol)) {
 
 ### Backtracking
 
-* Addition
-* Decision
-* Removal
+#### 3 main steps
+
+1. Addition
+2. Decision
+3. Removal
+
+#### Things to note for Backtracking
+
+* DFS is associated with Backtracking
+* If 2 pointers are involved, **send only 1 pointer**(Most of the times) in Recursive function
+* The other pointer will be within the recursive function as a loop
+* The **base condition** of the Recursive function can be determined at the very end. i.e after Addition, Decision and Removal
 
 ### Dynamic Programming
+
+#### To solve DP
+
+1. Get the Recurrence relation
+2. Initial Recursive solution
+3. Memoize upon seeing wasted cycles while drawing or thinking about the State Space Tree
+4. Come up with Bottom Up Iterative Solution
+
+#### Things to note for DP
 
 * While Memoizing, during recursive call store current calculation in that call itself and don't pass to arguments
   * Else, this would mess up during storage(Memoize)
