@@ -47,6 +47,10 @@ Each solution contains a distinct board configuration of the n-queens' placement
 
 ### Step 7: Time and Space Complexity
 
-* Time Complexity: I think O(n.n!)
-* Space Complexity: O(n)
+* Time Complexity: O(n!)
+  * Consider 4x4 board, in 1st row Queen can be placed in 4 positions, 2nd row 3 positions, 3rd row 2 positions...
+  * This is n! as 4 x 3 x 2 x 1
+* Space Complexity: O(n^2)
   * Max depth of recursive stack is till n
+  * Board n x n Grid
+  * With author's approach, it is O(n)
