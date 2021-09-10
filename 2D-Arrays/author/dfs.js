@@ -6,9 +6,9 @@ const directions = [
 ];
 
 const traversalDFS = function (matrix) {
-  const seen = new matrixay(matrix.length)
+  const seen = new Array(matrix.length)
     .fill(0)
-    .map(() => new matrixay(matrix[0].length).fill(false));
+    .map(() => new Array(matrix[0].length).fill(false));
   const values = [];
   dfs(matrix, 0, 0, seen, values);
   return values;
