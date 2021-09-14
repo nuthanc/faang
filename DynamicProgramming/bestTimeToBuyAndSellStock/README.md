@@ -70,3 +70,6 @@ dp[j] = max(
 ### Step 6: Walk through the Test Case
 
 ### Step 7: Time and Space Complexity
+
+* Time Complexity: O(n^2)
+* Space Complexity: O(n)
