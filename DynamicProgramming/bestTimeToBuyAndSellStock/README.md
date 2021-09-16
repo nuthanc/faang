@@ -40,7 +40,7 @@ Output: 0
 ### Step 3: Solution without code
 
 * prices[i], i - day
-* buy, sell
+* buy, sell and rest
 * buy: Cannot do 2 buys one after the other
 * sell: cannot sell on day 1 as you don't have any stocks
 * sell has cooldown of 1 day, next day you can't buy
@@ -62,6 +62,17 @@ profit_selling_previous = dp[j-1]
 dp[j] = max(
     profit_selling_current, profit_selling_previous, dp[j])
 ```
+
+#### Author's approach
+
+```txt
+When you buy the ith item the prev day has to be a rest day
+When you sell the ith item you have to buy previously
+When you take rest you can choose bw the max of prev rest and prev sell
+```
+
+* The problem with my logic is I am only considering selling the best at each iteration
+* I should have considered also resting the best and buying the best
 
 ### Step 4: Solution with code
 

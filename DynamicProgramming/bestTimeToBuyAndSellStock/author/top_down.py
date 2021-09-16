@@ -24,3 +24,4 @@ class Solution:
         else:  # buy is False
             self.dp[(i, buy)] = max(
                 self.prices[i]+self.maxProfitTopdown(i+2, True), self.maxProfitTopdown(i+1, False))
+            return self.dp[(i, buy)]
