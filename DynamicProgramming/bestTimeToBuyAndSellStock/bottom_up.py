@@ -3,6 +3,7 @@ class Solution:
         n = len(prices)
         if n <= 1:
             return 0
+        dp = [0] * n
 
         for j in range(1, n):
             for i in range(n):
