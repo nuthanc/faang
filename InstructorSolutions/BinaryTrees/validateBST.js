@@ -45,7 +45,7 @@ const dfs = function (node, min, max) {
   }
 
   if (node.right) {
-    if (!dfs(node.right, node.val, max)) {
+    if (!dfs(node.right, node.val, max)) { // No need to check here, can directly return dfs, like return dfs(node.right, node.val, max)
       return false;
     }
   }
