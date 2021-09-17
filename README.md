@@ -25,7 +25,7 @@
 * **Critical thinking process of breaking apart the question to identify subproblems and how you can solve it and put it all together** 
   * Check Question 21(Rotting oranges README) for this
   * Use **Reverse Psychology**, check longestCommonSubsequence in DP
-    * When a problem says Source to Destination, you can use reverse psychology to thing Destination to Source
+    * When a problem says Source to Destination, you can use reverse psychology to think Destination to Source
 
 ### Constraints in General
 
