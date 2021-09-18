@@ -31,7 +31,7 @@
 
 ### Step 7: Space and Time Complexity
 
-* Time Complexity with Author's QuickSort implementation: O(nlogn)
+* Time Complexity with Author's QuickSort implementation: O(nlogn), O(n^2) in worst case
   * How long to find the Partition: O(n)
     * scans across the whole array
   * How many times are we doing the Partition call: O(logn)
@@ -50,10 +50,10 @@
 * With 6 elements, the second largest is the fifth smallest
 * QuickSelect's logic of partitioning is still the same 
 * The only difference is checking the partitionIndex with indexToFind and based on that decision, we either find only left of partitionIndex or right of partitionIndex
-* Time Complexity:
+* Time Complexity: O(n^2)
   * Partition function's Time Complexity is O(n) since it scans through the entire array
   * And based on the partition obtained, best case is O(n) and worst case is O(n^2)
     * Best case is the elements to scan gets divided into half in each iteration n + n/2 + n/4 ..=O(2n)~O(n)
-    * Worst case is when it is in Descending order and you have to scan all the elements except the partition
+    * Worst case is when it is in Descending order and you have to scan all the elements except the partition n + n-1 + n-2 + ... = n(n+1)/2 ~O(n^2)
 * Space Complexity: O(1)
   * Optimal situation for Tail Recursion since it is returning and calling only quickSelect causing it to pop itself off the call stack after it is finished
