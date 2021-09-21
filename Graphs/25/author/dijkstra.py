@@ -12,7 +12,7 @@ def networkDelayTime(times, n, k):
     heap = []
     heapq.heappush(heap, (0, k-1)) #(weight, index)
     while len(heap):
-        weight, currentVertex = heapq.heappop(heap)
+        weightCurrent, currentVertex = heapq.heappop(heap)
         adjacent = adjList[currentVertex]
         for item in adjacent:
             vertex, weight = item

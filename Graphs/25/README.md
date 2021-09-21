@@ -45,6 +45,8 @@ We will send a signal from a given node k. Return the time it takes for all the 
 * Does not matter whether there are Cycles in the Graph
 * Worst possible Graph we could receive is a Complete Graph(Every vertex connects to every other vertex)
 * **Author's Dijkstra's**
+* https://stackoverflow.com/questions/26547816/understanding-time-complexity-calculation-for-dijkstra-algorithm
+* **Time Complexity explained well in above**
 * Time Complexity: O(n+ElogE)
   * O(2n) for distances array and also adjList, n is the number of vertices
   * O(E) for iterating times array, where E is the number of edges

@@ -1,7 +1,7 @@
-def dfs(adj_list, start_node, values, seen):
-    seen.add(start_node)
-    values.append(start_node)
-    for ele in adj_list[start_node]:
+def dfs(adj_list, vertex, values, seen):
+    seen.add(vertex)
+    values.append(vertex)
+    for ele in adj_list[vertex]:
         if ele not in seen:
             dfs(adj_list, ele, values, seen)
 
