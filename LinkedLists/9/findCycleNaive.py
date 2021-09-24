@@ -31,7 +31,7 @@ for val in nodes:
     cur.next = Node(val)
     cur = cur.next
 
-cur.next = head.next.next;
+cur.next = head.next.next
 
 
 
