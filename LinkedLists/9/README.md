@@ -23,6 +23,7 @@ Notice that you should not modify the linked list.
 * **One slow pointer**: Tortoise(1 step) and **another fast pointer**: Hare(2 steps)
 * When both point to the same node and Hare's next pointer or Hare's pointer is not null, then we have a cycle and that point is the Meeting point
 * To get the Node where the cycle start, initialize 2 pointers 1 at start and the other at the meeting point
+* https://www.codingninjas.com/blog/2020/09/09/floyds-cycle-detection-algorithm/
 * Then traverse each pointer with 1 step
 * The point where they meet is the Node where the cycle starts
 
