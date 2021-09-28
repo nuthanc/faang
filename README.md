@@ -12,6 +12,7 @@
   * 4 technical
   * 1 cultural/personality fit
 * Author: Yihua Zhang
+* **Google Docs FAANG Play Area link**: https://docs.google.com/document/d/12PkFRh6FHxEWgzC8-Hv5QxWM99WPrKZksFY3M4k3nwM/edit
 
 #### 3 keys to Technical Interview
 

@@ -17,7 +17,7 @@ class Trie {
         cur.keys[ch] = new Node();
       }
       cur = cur.keys[ch];
-      if (i === word.length - 1) {
+      if (i === word.length - 1) { // I think I could have taken this outside the for loop as cur would be pointing to last element anyway and no condition would be required
         cur.isEnd = true;
       }
     }
@@ -30,7 +30,7 @@ class Trie {
         return false;
       }
       cur = cur.keys[ch];
-      if (i === word.length - 1) {
+      if (i === word.length - 1) { // Outside for loop without if
         return cur.isEnd;
       }
     }
@@ -43,7 +43,7 @@ class Trie {
         return false;
       }
       cur = cur.keys[ch];
-      if (i === prefix.length - 1) {
+      if (i === prefix.length - 1) { // Outside for loop without if
         return true;
       }
     }
