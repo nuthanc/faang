@@ -22,3 +22,8 @@
 * Then use the formula 2^h-1 to get the Penultimate level nodes
 * Use Binary search utilizing low, high and mid to get the number of nodes in the last level
 * To find the nodes, start from root and utilize height of tree as a counter to get to the last level to find if Node exists or not
+
+### Validate Binary Search Tree
+
+* Using min, max as rules with Preorder traversal
+* Or Inorder traversal
