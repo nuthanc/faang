@@ -13,6 +13,7 @@
   * 1 cultural/personality fit
 * Author: Yihua Zhang
 * **Google Docs FAANG Play Area link**: https://docs.google.com/document/d/12PkFRh6FHxEWgzC8-Hv5QxWM99WPrKZksFY3M4k3nwM/edit
+* DSA Python: https://github.com/theja-m/Data-Structures-and-Algorithms
 
 #### 3 keys to Technical Interview
 
