@@ -222,9 +222,15 @@
 
 ### Sudoku Solver
 
-* Add numbers from 1 to 8 using a loop
+* Add numbers from 1 to 9 using a loop
 * Decide whether to recurse further based on row set, column set and box set
 * Remove that number
+
+### Palindrome Partitioning
+
+* 2 Pointers, 1 starting pointer(argument in Recursive function) and another ending pointer(as loop within the Recursive function)
+* Add partialSplits and decide whether it is a Palindrome and Recurse further based on this decision
+* Remove the partialSplits
 
 ### N-Queens
 
@@ -240,5 +246,6 @@
 
 ### Tries
 
+* Variation of n-ary Tree for Strings
 * Trie Node with keys and isEnd
 * Use currentNode = root and use iterative approach
