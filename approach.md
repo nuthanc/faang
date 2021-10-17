@@ -213,13 +213,39 @@
 * Think of the final state, top of stairs
 * It can be reached via n-1 and n-2, so get minCost of those 2 added with current stair cost
 * Base case of stair 1 and stair 2 being their values and anything below that as 0
-* Iterative start from stair 1 and stair as their base cases
+* Iterative start from stair 1 and stair 2 as their base cases
 
 ### Knight Probability in Chessboard
 
 * Knight Within bounds and k=0, then return 1
 * Else result += eight directions prob/8
 
+### Best Time To Buy and Sell Stocks
+
+* Top Down
+  * Recursive function with day and buy (maxProfit(0, True))
+  * Base case when day >= len(profit), return 0
+  * When buy is True, store max((-prices[day]+maxProfit(day+1, False)), maxProfit(day+1, True))
+  * When buy is False, store max((prices[day]+maxProfit(day+2, True)), maxProfit(day+1, False))
+* Bottom Up
+  * When len(prices) <= 1, return 0
+  * Use buy=-prices[0], sell=0 and rest=0 and start from day 1 and iterate through 1 to n-1
+  * In loop, use pb=buy, ps=sell, pr=rest and calculate buy, sell and rest values
+  * buy = max(pb, -prices[day]+pr)
+  * sell = max(ps, prices[day]+pb)
+  * rest = max(ps, pr)
+  * Final answer: max(sell, rest)
+
+### Delete Minimum to Make Strings Equal
+
+* Use longest common subsequence and utilize length of both strings to subtract twice of lcs
+* Top Down:
+  * Recursive Function has str1 and str2 along with i and j(pointers of str1 and str2 respectively)
+  * When the characters are equal, increment lcs and move both the pointers
+  * Else, get max of moving the first pointer and moving the second pointer
+* Bottom Up:
+  * Same logic as Top Down when characters are equal and non-equal, but we are building from the Bottom Up
+  * So take previous value + 1 when equal and max of 1 of the 2 pointers when they are not equal
 ### Sudoku Solver
 
 * Add numbers from 1 to 9 using a loop

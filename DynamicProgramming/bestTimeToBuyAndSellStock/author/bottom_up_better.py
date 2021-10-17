@@ -14,3 +14,5 @@ class Solution:
             s = max(ps, pb+prices[i])
             r = max(ps, pr)
         return max(s, r)
+# Time Complexity: O(n)
+# Space Complexity: O(1)
