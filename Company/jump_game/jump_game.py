@@ -1,5 +1,8 @@
 '''
 https://leetcode.com/problems/jump-game/
+Better Answer: https://leetcode.com/problems/jump-game/discuss/1523365/O(N)-Time-and-O(1)-space-or-100-efficient-or-Interview-Style-Code-walk-through
+
+https://leetcode.com/problems/jump-game/discuss/1294482/Linear-Dp-Solutioin-recurrsive-approach-C%2B%2B
 
 You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.
 
@@ -51,6 +54,11 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum jump 
 6. Walk through the Test Case
 
 7. Time and Space Complexity
+* Space Complexity: O(n)
+    * dp: O(n)
+    * Recursive stack: O(n)
+* Time Complexity: O(n)
+    * All numbers visited once in worst case and stored in dp
 '''
 
 
