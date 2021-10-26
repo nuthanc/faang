@@ -62,6 +62,25 @@
 * Slow as Fast pointer(1 and 2 leaps)
 * At meeting point, move that pointer 1 step at a time along with head point 1 step at a time to get the node at which cycle starts
 
+### Reorder List
+
+* Two pointers and using Recursion, one pointing to the start and the other the end
+  * Keep on Recursing until second pointer points to the Last element
+  * While Recursing, we can have Base condition at the beginning, recursive call and condition again
+* Another approach is using Fast and Slow pointers
+  * At the end, slow pointer will be pointing to the middle element
+  * We will point that to None and reverse the second half
+  * Finally merge first and second half in alternating way
+
+### Jump Game
+
+* I used Backtracking and Memoization
+* Another approach is DP Top Down Approach where you begin from the Last position
+  * To reach that position, it can be reached by n-2,n-3...1
+  * If the Goal can be reached, then the Goal is reassigned to the index which reaches it
+  * This goes on till the 0th index
+  * At the end, if goal === 0, then return True else False
+
 ### Valid Parentheses
 
 * Dictionary of Open braces for fast lookup

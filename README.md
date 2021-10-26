@@ -81,6 +81,7 @@ if (solveBacktrack(board, boxes, rows, cols, nextRow, nextCol)) {
   return true;
 }
 ```
+* While Recursing, we can have Base condition at the beginning, recursive call and condition again
 
 ### 2d Arrays
 
