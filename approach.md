@@ -83,6 +83,7 @@
 
 ### Valid Parentheses
 
+* Stack to add Open braces
 * Dictionary of Open braces for fast lookup
 * Pop and compare when Close braces are encountered
 
