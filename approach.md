@@ -59,7 +59,7 @@
 ### Cycle Detection
 
 * Hashmap
-* Slow as Fast pointer(1 and 2 leaps)
+* Slow and Fast pointer(1 and 2 leaps)
 * At meeting point, move that pointer 1 step at a time along with head point 1 step at a time to get the node at which cycle starts
 
 ### Reorder List
