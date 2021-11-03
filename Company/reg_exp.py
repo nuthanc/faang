@@ -39,7 +39,7 @@ class Solution:
     def check(self, ind_s, ind_p, s, p):
         if ind_s < 0 and ind_p < 0:
             return True
-        elif ind_s < 0 or ind_p < 0:
+        elif ind_p < 0 or (ind_s < 0 and p[ind_p] != '*'):
             return False
         else:
             if p[ind_p] == '*':
@@ -47,14 +47,12 @@ class Solution:
                 if preceding == '.':
                     if ind_p - 1 == 0:
                         return True
-                    while ind_s >= 0:
+                    while ind_s >= -1:
                         if self.check(ind_s, ind_p-2, s, p):
                             return True
                         ind_s -= 1
                 else:
-                    if ind_p - 1 == 0: # Need to check here and finally through example
-                        return True
-                    while ind_s >= 0:
+                    while ind_s >= -1:
                         if self.check(ind_s, ind_p-2, s, p):
                             return True
                         if p[ind_p-1] == s[ind_s]:
