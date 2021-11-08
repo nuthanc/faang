@@ -266,6 +266,15 @@
 * Bottom Up:
   * Same logic as Top Down when characters are equal and non-equal, but we are building from the Bottom Up
   * So take previous value + 1 when equal and max of 1 of the 2 pointers when they are not equal
+
+### Regular Expression
+
+* first_match to store whether the 1st character of pattern is equal to the text character or '.'
+* Check for '*' in the next character and based on that **OR** of the below 2
+  * Recursive Move pattern's pointer(j) by 2 steps and keep text pointer the same(This is taking 0 occurences of pattern)
+  * first_match and Recursive Move text's pointer(i) by 1 and keep pattern's pointer(j) the same(This is taking 1 of the many matches from pattern and advancing i)
+* Else, first_match and Recursively move i and j by 1
+
 ### Sudoku Solver
 
 * Add numbers from 1 to 9 using a loop
