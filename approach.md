@@ -72,15 +72,6 @@
   * We will point that to None and reverse the second half
   * Finally merge first and second half in alternating way
 
-### Jump Game
-
-* I used Backtracking and Memoization
-* Another approach is DP Top Down Approach where you begin from the Last position
-  * To reach that position, it can be reached by n-2,n-3...1
-  * If the Goal can be reached, then the Goal is reassigned to the index which reaches it
-  * This goes on till the 0th index
-  * At the end, if goal === 0, then return True else False
-
 ### Valid Parentheses
 
 * Stack to add Open braces
@@ -274,6 +265,15 @@
   * Recursive Move pattern's pointer(j) by 2 steps and keep text pointer the same(This is taking 0 occurences of pattern)
   * first_match and Recursive Move text's pointer(i) by 1 and keep pattern's pointer(j) the same(This is taking 1 of the many matches from pattern and advancing i)
 * Else, first_match and Recursively move i and j by 1
+
+### Jump Game
+
+* I used Backtracking and Memoization
+* Another approach is DP Top Down Approach where you begin from the Last position
+  * To reach that position, it can be reached by n-2,n-3...1
+  * If the Goal can be reached, then the Goal is reassigned to the index which reaches it
+  * This goes on till the 0th index
+  * At the end, if goal === 0, then return True else False
 
 ### Sudoku Solver
 
