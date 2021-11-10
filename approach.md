@@ -96,7 +96,7 @@
 
 * Find the partition element
   * Using the last element as pivot for comparison, start from the beginning
-  * If the current element is less than or equal to pivot, swap with pointer j and advance j
+  * If the current element is less than or equal to pivot, swap with pointer j, increment i and advance j
 * Quick sort low to partition - 1 and partition + 1 to high
 
 ### Merge Sort
