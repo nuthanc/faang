@@ -167,7 +167,7 @@
 
 * Use directions array
 * Move continously in one direction till you reach some boundaries or is already visited before moving on to the next direction
-* Use of Stack or Recursion and seen Set
+* Use of Stack or Recursion and seen 2D array
 
 ### BFS in 2D-Arrays
 
