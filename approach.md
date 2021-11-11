@@ -171,7 +171,7 @@
 
 ### BFS in 2D-Arrays
 
-* Use of Queues and seen Set
+* Use of Queues and seen 2D array
 * Move in Radial direction
 
 ### Number of Islands
