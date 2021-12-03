@@ -185,7 +185,7 @@
 
 ### Walls and Gates
 
-* Sequentially traverse and upon encountering Gates, BFS and DFS and update the empty rooms
+* Sequentially traverse and upon encountering Gates, BFS or DFS and update the empty rooms if the value is smaller than what is already present
 
 ### BFS Graph traversal
 
