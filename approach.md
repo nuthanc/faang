@@ -80,7 +80,7 @@
 
 ### Minimum Brackets To Remove To Make Valid
 
-* Convert String to List using split
+* Convert String to List using split(js) or list(py)
 * When Open Brace is encountered, add its index to stack
 * When Close Brace is encountered, pop from stack
 * If Stack is empty, make the Close brace as ''(Empty string)
