@@ -26,9 +26,10 @@
 
 ### Longest Substring without Repeating Characters
 
-* Dictionary and 2 pointers(p1 and p2), hmap[s[p2]] = p2 + 1
-* p1 should be max of previous found location + 1 and i, when a repeat is found (p1 = max(hmap[s[p2]], p1))
-* maxlength is calculated at every step (maxlen = max(maxlen, p2 - p1 + 1))
+* Dictionary(seen) and 2 pointers(left and right)
+* left = seen[current_char] + 1 when seen[current_char] >= left and ignored when seen[current_char] is less than left pointer
+* seen[current_char] = right
+* maxlength is calculated at every step (maxlen = max(maxlen, right - left + 1))
 
 ### Valid Palindrome
 
