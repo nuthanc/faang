@@ -152,7 +152,6 @@
 * My logic was to find the paths for both the nodes and compare the paths for the LCA
 * Author's even better approach was 
   * If a node has both the given nodes to find in its left and right subtrees, then it is the LCA
-  * If a node has one of the given node in its subtree, but not the other, then the given found node is the LCA, because the second node will be in the sub-trees of the first node
 
 ### Max Heap/Priority Queue
 
