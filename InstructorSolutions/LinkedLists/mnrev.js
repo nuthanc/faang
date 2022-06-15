@@ -38,24 +38,24 @@ var reverseBetween = function (head, m, n) {
     currentPos++;
   }
 
-  let newList = null,
+  let prev = null,
     tail = currentNode;
 
   while (currentPos >= m && currentPos <= n) {
     const next = currentNode.next;
-    currentNode.next = newList;
-    newList = currentNode;
+    currentNode.next = prev;
+    prev = currentNode;
     currentNode = next;
     currentPos++;
   }
 
-  start.next = newList;
+  start.next = prev;
   tail.next = currentNode;
 
   if (m > 1) {
     return head;
   } else {
-    return newList;
+    return prev;
   }
 };
 
