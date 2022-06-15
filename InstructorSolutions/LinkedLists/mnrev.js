@@ -32,7 +32,7 @@ var reverseBetween = function (head, m, n) {
     currentNode = head;
   let start = head;
 
-  while (currentPos < m) {
+  while (currentPos < m) { // Use for loop
     start = currentNode;
     currentNode = currentNode.next;
     currentPos++;
@@ -41,7 +41,7 @@ var reverseBetween = function (head, m, n) {
   let prev = null,
     tail = currentNode;
 
-  while (currentPos >= m && currentPos <= n) {
+  while (currentPos >= m && currentPos <= n) { // Can use left and right and for loop
     const next = currentNode.next;
     currentNode.next = prev;
     prev = currentNode;
@@ -49,7 +49,7 @@ var reverseBetween = function (head, m, n) {
     currentPos++;
   }
 
-  start.next = prev;
+  start.next = prev; // This was not required at all for Bijay, he did it in 2nd while loop itself
   tail.next = currentNode;
 
   if (m > 1) {
