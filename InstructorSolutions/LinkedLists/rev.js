@@ -40,7 +40,7 @@ var reverseList = function (head) {
 
   return prev;
 };
-
+h
 printList(linkedList);
 console.log('after reverse');
 printList(reverseList(linkedList));

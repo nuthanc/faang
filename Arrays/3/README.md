@@ -53,10 +53,10 @@
   * Two pointers for keeping track of **maximum values they have seen so far** (This solves min(maxLeft, maxRight) part of the equation)
   * We need to make one of the 2 pointers as currentPointer as well as moving pointer
   * The container will be maxLeft, p1 and p2 when v[p1] <= v[p2] (This ensures left boundary is smaller than right boundary and value can be calculated with leftBoundary and currentHeight alone)
-    * We keep moving p1 when it is less than p2, so all elements left of p1(left boundary) will be smaller than v[p2], so need to calculate min(maxLeft, maxRight) as it will be maxLeft always
+    * We keep moving p1 when it is less than p2, so all elements left of p1(left boundary) will be smaller than v[p2], so no need to calculate min(maxLeft, maxRight) as it will be maxLeft always
   * Else it will be p1, p2 and maxRight when v[p1] > v[p2]
     * The condition to move p2 comes only when value of p2 is less than p1
-    * We keep moving p2 when it is less than p1, so all elements right of p2 will be smaller than v[p1], so need to calculate min(maxLeft, maxRight) as it will be maxRight always
+    * We keep moving p2 when it is less than p1, so all elements right of p2 will be smaller than v[p1], so no need to calculate min(maxLeft, maxRight) as it will be maxRight always
 * After Optimizaton, Time Complexity is O(n) and Space Complexity is also O(n)
   * Touching every element once and no additional operations by touching other elements in the array(focus on current element)
   * No additional space, static values that don't scale

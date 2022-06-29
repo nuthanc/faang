@@ -3,7 +3,7 @@ const string = 'abcabcbb';
 const lengthOfLongestSubstring = function (s) {
   if (s.length <= 1) return s.length;
 
-  const seen = {};
+  const seen = {}; // Object was not at all required by Aman
   let left = 0,
     longest = 0;
 
