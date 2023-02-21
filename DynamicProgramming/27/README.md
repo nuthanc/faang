@@ -60,7 +60,7 @@ Return the probability that the knight remains on the board after it has stopped
   * The Recursive solution would be Brute force(i.e no Memoization in the beginning)
   * To get Recursive solution
     * We need to think what is the main Problem we are trying to solve?
-    * Can we break this down into smaller but Repeated sub-problems
+    * **Can we break this down into smaller but Repeated sub-problems**
     * The Subproblem should look like a reflection of the Main problem
 * Define some type of function that represents our Recursive function
   * knightP(k,r,c) 
