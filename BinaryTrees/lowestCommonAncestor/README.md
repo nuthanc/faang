@@ -1,6 +1,7 @@
 ### Lowest Common Ancestor of a Binary Tree
 
 * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+* Super approach: https://medium.com/analytics-vidhya/lowest-common-ancestor-of-a-binary-tree-day-10-python-be7d09791ba2
 ```txt
 Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 
@@ -27,7 +28,7 @@ According to the definition of LCA on Wikipedia: “The lowest common ancestor i
 * Then in the paths find for lowest common element
 
 ### Step 4: Solution with code
-* Other approaches in https://medium.com/analytics-vidhya/lowest-common-ancestor-of-a-binary-tree-day-10-python-be7d09791ba2
+* Super approaches in https://medium.com/analytics-vidhya/lowest-common-ancestor-of-a-binary-tree-day-10-python-be7d09791ba2
 
 ### Step 5: Double Check for Errors
 
